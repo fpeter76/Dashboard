@@ -96,18 +96,6 @@
           "legendFormat": "__auto",
           "range": true,
           "refId": "A"
-        },
-        {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "prometheus"
-          },
-          "editorMode": "code",
-          "expr": "",
-          "hide": false,
-          "legendFormat": "__auto",
-          "range": true,
-          "refId": "B"
         }
       ],
       "title": "Panel Title",
@@ -184,7 +172,7 @@
           },
           "editorMode": "builder",
           "exemplar": true,
-          "expr": "node_md_state{ls_customer_name=\"Michelangelo Server\"}",
+          "expr": "node_md_state{ls_customer_name=\"$lscustomername\"}",
           "legendFormat": "{{device}}:{{state}}",
           "range": true,
           "refId": "A"
@@ -278,7 +266,7 @@
           },
           "editorMode": "builder",
           "exemplar": true,
-          "expr": "node_filesystem_avail_bytes{ls_customer_name=\"Michelangelo Server\"}",
+          "expr": "node_filesystem_avail_bytes{ls_customer_name=\"$lscustomername\"}",
           "legendFormat": "{{device}}",
           "range": true,
           "refId": "A"
